@@ -1,0 +1,919 @@
+/* Custom Fonts */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700|Dosis:400,600,700);
+@import url(fonts.css);
+
+/* Other CSS */
+@import url(reset.css);
+@import url(formee-structure.css);
+@import url(formee-style.css);
+@import url(buttons.css);
+
+html,body{
+    font: normal 10px/1.1em 'RobotoRegular',Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background: #1b2029;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family:'RobotoRegular',Arial,sans-serif;
+    color:#191919;
+    padding:10px 0 20px;
+}
+
+h1 {
+    font-size:37px;
+    line-height:44px;
+    padding:12px 0 10px;
+}
+
+h2 {
+    font-size:27px;
+    line-height:35px;
+}
+
+h3 {
+    font-size:24px;
+    line-height:normal;
+}
+
+h4 {
+    font-size:19px;
+    line-height:normal;
+}
+
+h5 {
+    font-size:17px;
+    line-height:normal;
+}
+
+#the_site{
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+#right_panel, #center_panel{
+    transition:all .3s;-moz-transition:all .3s;-webkit-transition:all .3s;-o-transition:all .3s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    background: #000;
+    z-index: 2;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #1b2029;
+    opacity: 1;
+}
+
+#right_panel.preview, #center_panel.preview{
+    opacity: 0;
+}
+
+
+
+#right_panel{
+    left: auto;
+    right: -200px;
+    box-shadow: 10px 0 18px #0c0e14 inset;
+}
+
+#right_panel.open{
+    right: 0;
+}
+
+#left_panel{
+    box-shadow: -10px 0 18px #0c0e14 inset;
+    display: none;
+}
+
+#center_panel{
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+    background: transparent url('../img/bg.png');
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 100%;
+    overflow: hidden;
+    padding-bottom: 400px;
+}
+
+#center_panel.open{
+    left: 0;
+}
+
+#center_panel > div{
+    margin-right: 200px;
+    padding: 0 40px 0 40px;
+    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+#center_panel .content_header h1:first-of-type{
+    font-size: 62px;
+    color: #b54b50;
+    line-height: 62px;
+    margin-top: 30px;
+    margin-right: 200px;
+    text-shadow: -1px -1px #111;
+}
+
+#center_panel .content_header h1:first-of-type i{
+    display: inline-block;
+    margin-right: 25px;
+    color: #fff;
+}
+
+#center_panel .content_header h2:first-of-type{
+    font-family: 'RobotoThin';
+    font-size: 32px;
+    color: #fff;
+    line-height: 32px;
+    margin-bottom: 20px;
+    margin-right: 200px;
+}
+
+#main_menu{
+    list-style-type: none;
+    margin-bottom: 150px;
+    float: left;
+}
+
+#main_menu > li{
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+#main_menu > li > a{
+    font-family: 'RobotoBold';
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #111;
+    border-top: 1px solid #323a4d;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-shadow: -1px -1px #000;
+    padding-left: 10px;
+    transition:all .3s;-moz-transition:all .3s;-webkit-transition:all .3s;-o-transition:all .3s;
+}
+
+#main_menu > li > a i{
+    font-size: 16px;
+    margin-right: 5px;
+    line-height: 40px;
+}
+
+#main_menu a i.icon-spinner{
+    float: right;
+    display: inline-block;
+}
+
+#main_menu > li > a:hover, #main_menu > li.active a{
+    background: #080a0f;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+#main_menu > li ul{
+    display: none;
+}
+
+#main_menu > li.active ul{
+    display: block;
+}
+
+#main_menu > li ul li{
+    width: 100%;
+    float: left;
+}
+
+#main_menu > li ul li a{
+    display: block;
+    line-height: 30px;
+    text-decoration: none;
+    background: #292736 !important;
+}
+
+#main_menu > li ul li a:hover, #main_menu > li ul li.active a{
+    background: #f6cf6f !important;
+    color: #333;
+    font-weight: bold;
+}
+
+#main_menu > li ul li a:first-of-type{
+    border-bottom: 0;
+}
+
+#main_menu ul a i.icon-spinner{
+    line-height: 30px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+#login{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -170px 0 0 -160px;
+    position: relative;
+    background: #eee;
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.5);
+}
+
+#login .logo{
+    position: absolute;
+    width: 100%;
+    top: -130px;
+    text-align: center;
+    left: 0;
+}
+
+#login fieldset{
+    padding: 20px;
+}
+
+#login fieldset > div{
+    padding: 10px 0;
+}
+
+#login fieldset > div:first-of-type{
+    border-top: 0;
+}
+
+#all_themes{
+    z-index: 20;
+}
+
+#theme_page_header h1{
+    font-family: 'RobotoRegular', sans-serif;
+    font-size: 32px;
+    display: block;
+    line-height: 40px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+#theme_page_header p{
+    display: block;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 6px;
+    color: #666;
+}
+
+#theme_page_header p.desc{
+    color: #444;
+    font-size: 15px;
+    line-height: 22px;
+    padding-top: 5px;
+}
+
+#theme_page_header > div{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #1b2029;
+}
+
+#theme_page_header ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+#theme_page_header ul li{
+    display: inline;
+    font-size: 14px;
+    color: #666;
+}
+
+#theme_page_header ul li:after {
+content: ", ";
+}
+ 
+#theme_page_header ul li:last-child:after {
+content: "";
+}
+
+#ucp_info{
+    padding: 20px 10px;
+    background: transparent url(../img/logo_mini.png) 115px center no-repeat;
+    color: #fff;
+}
+
+#ucp_info a{
+    margin-left: 0;
+}
+
+#button_wrapper{
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    text-align: center;
+    z-index: 40000;
+}
+
+#button_wrapper button{
+    font-family: 'RobotoBold';
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#preview_switch.off{
+    display: none;
+}
+
+#preview_switch{
+    background: #1f5796;
+}
+
+#panel_switch{
+    background: green;
+}
+
+#panel_switch.on{
+    background: #de1818;
+}
+
+#all_themes .theme{
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+    float: left;
+    clear: both;
+    box-shadow: 5px 5px 0 5px #bbb;
+    cursor: pointer;
+}
+
+#all_themes .theme:hover h3{
+}
+
+#all_themes img{
+    width: 100%;
+    display: block;
+    position: relative;
+    background: #fff;
+}
+
+#all_themes h3{
+    font-family: 'RobotoBold', sans-serif;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #222;
+    background: rgba(27,32,41,0.9);
+    line-height: 26px;
+    padding: 8px 20px;
+    text-shadow: -1px -1px #111;
+    text-transform: uppercase;
+    max-width: 70%;
+    display: block;
+    z-index: 10;
+}
+
+#all_themes .theme:hover h3, #all_themes .theme.active h3{
+    background: #b54b50;
+    text-shadow: -1px -1px #444;
+}
+
+#all_themes .theme > span.arrow{
+    visibility: hidden;
+    opacity: 0;
+    font-size: 100px;
+    color: #bbb;
+    position: absolute;
+    display: block;
+    right: -33px;
+    top: 50%;
+    margin-top: -50px;
+}
+
+#all_themes .theme:hover > span.arrow, #all_themes .theme.active > span.arrow{
+    opacity: 1;
+    right: -40px;
+    visibility: visible;
+}
+
+#all_themes .theme > span.active{
+    font-size: 50px;
+    color: green;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+    position: absolute;
+    display: block;
+    right: 10px;
+    top: 10px;
+    border-radius: 100px; -moz-border-radius: 100px; -webkit-border-radius: 100px;
+    padding: 0 4px;
+    z-index: 20;
+    box-shadow: 0 0 0 2px #bbb;
+}
+
+#all_themes .theme > button{
+    position: absolute;
+    display: block;
+    right: 30px;
+    top: 10px;
+    z-index: 20;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#all_themes .theme:hover > button, #all_themes .theme.loading > button {
+    opacity: 1;
+    visibility: visible;
+    right: 10px;
+}
+
+/* Form Styles */
+
+.form input{
+    
+}
+
+.button i{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.button i.icon-spinner{
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+/*.ui-dialog-buttonset i.icon-spinner{
+    font-size: 42px;
+    color: #333;
+}*/
+
+label a.info{
+    display: inline-block;
+    margin-left: 5px;
+    color: #69A4D0;
+    text-decoration: none;
+}
+
+label a.info:hover{
+    color: #1b2029;
+}
+
+/* Stylers */
+.content_header{
+    background: rgba(27,32,41,0.9);
+    overflow: hidden;
+    margin: 0 1.6% 20px 1.6%;
+}
+
+.content{
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.filemanager{
+    font-size: 18px !important;
+}
+
+.elfinder-contextmenu .elfinder-contextmenu-item span{
+    font-size: 14px !important;
+}
+
+.table{
+    width: 100%;
+    border-top: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.table th{
+    font-family: 'RobotoRegular';
+    font-size: 16px;
+    letter-spacing: -.035em;
+    color:#555;
+    font-weight: bold;
+    white-space: nowrap;
+    background: #ddd;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #dddddd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#dddddd 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#dddddd 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#dddddd 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#dddddd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
+    padding: 0;
+    height: 50px;
+    line-height: 55px;
+    margin: 0 0 0 -1px;
+    border-bottom: 1px solid #ccc;
+    text-shadow: 1px 1px #fff;
+    text-transform: uppercase;
+    text-align: left;
+    text-indent: 10px;
+}
+
+.table td, .table th{
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.table td{
+    padding: 10px;
+    font-size: 13px;
+    background: #eee;
+    color: #444;
+}
+
+.table tr:hover td, .table tr:hover td.id{
+    background: #ccc !important;
+    color: #333;
+}
+
+.table tr td:last-of-type, .table tr th:last-of-type{
+    border-right: 1px solid #ccc;
+}
+
+.table th.tiny{
+    width: 50px;
+}
+
+.table th.tiny2{
+    width: 100px;
+}
+
+.table th.tiny3{
+    width: 150px;
+}
+
+.table th.small{
+    width: 15%;
+}
+
+.table th.medium{
+    width: 30%;
+}
+
+.table th.big{
+    width: 50%;
+}
+
+.table th.large{
+    width: 70%;
+}
+
+.table td.id{
+    background: #ddd !important;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+}
+
+.table .button{
+    display: inline;
+    padding: 5px 10px;
+}
+
+
+.pagination {
+  margin:0;
+  display: inline-block;
+  float: right;
+}
+.pagination a {
+  display:inline-block;
+  width:auto;
+  margin-left:10px;
+  float:none;
+  padding:11px;
+  text-transform:lowercase;
+}
+.pagination a.none { display:none !important; }
+
+.pagination span {
+  padding-left:10px;
+  color:#999999;
+  font-size:3em;
+}
+
+.pagination a {
+  border:1px solid;
+  font-size:1.4em;
+  text-align:center;
+  font-weight:bold;
+  background:#e0e0e0;
+  background:-moz-linear-gradient(center top,#ffffff 0pt,#e0e0e0 100%);
+  background:-moz-linear-gradient(center top,#ffffff 0pt,#e0e0e0 100%);
+  background:-webkit-gradient(linear,center top,color-stop(0pt,#ffffff),color-stop(100%,#e0e0e0));
+  background:-webkit-linear-gradient(center top,#ffffff 0pt,#e0e0e0 100%);
+  background:-o-linear-gradient(center top,#ffffff 0pt,#e0e0e0 100%);
+  background:-ms-linear-gradient(center top,#ffffff 0pt,#e0e0e0 100%);
+  background:linear-gradient(center top,#ffffff 0pt,#e0e0e0 100%);
+  border-color:#bbb #bbb #aaaaaa #aaaaaa;
+  box-shadow:0 0 1px #ffffff inset;
+  text-shadow:0 1px 0 #ffffff;
+  text-decoration:none;
+  color:#999999;
+}
+
+.pagination a.current, .pagination a:hover {
+  color:#666666;
+  border-color:#999 #999 #888888 #888888;
+  background:#cccccc;
+  background:-moz-linear-gradient(center top,#aaaaaa 0%,#cccccc 100%);
+  background:-webkit-gradient(linear,center top,color-stop(0%,#444444),color-stop(100%,#222222));
+  background:-webkit-linear-gradient(center top,#444444 0%,#222222 100%);
+  background:-o-linear-gradient(center top,#444444 0%,#222222 100%);
+  background:-ms-linear-gradient(center top,#444444 0%,#222222 100%);
+  background:linear-gradient(center top,#444444 0%,#222222 100%);
+  text-shadow:0 1px 0 #ffffff;
+}
+
+.formee fieldset > div p{
+    color: #999;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+.open_file_browser i{
+    margin-right: 0;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+ 
+/* Regulars */
+.no_margin{
+    margin: 0 !important;
+}
+
+.no_marginBottom{
+    margin-bottom: 0 !important;
+}
+
+.trs{
+    transition:all .3s;-moz-transition:all .3s;-webkit-transition:all .3s;-o-transition:all .3s;
+}
+
+.fr{float: right;}
+.fl{float: left;}
+.fc{margin: 0 auto;}
+.tc{text-align: center !important;}
+
+.noTop{
+    top: 0;
+}
+
+.none{
+    display: none !important;
+    visibility: hidden;
+}
+
+.ui-dialog-content.none{
+    display: block !important;
+    visibility: visible;
+}
+
+.ui-dialog-content h1{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* iButton */
+.ibutton-container {
+  position: relative;
+  height: 27px;
+  cursor: pointer;
+  overflow: hidden;
+	/* set max width to that of sprite */
+	max-width: 400px;
+	/* prevent text selection */
+	-khtml-user-select: none;
+	-o-user-select: none;
+	-moz-user-select: none;
+	-moz-user-focus: ignore; 
+	-moz-user-input: disabled;
+	/* set default width based on ON/OFF labels */
+	width: 89px;
+        box-shadow: 0 1px 3px #ccc;
+        border-radius: 3px;
+}
+
+.ibutton-container input {
+  position: absolute;
+	top: 0;
+	left: 0;
+
+	/* hide the element */
+	filter:alpha(opacity=0);
+	-moz-opacity: 0.0; 
+	opacity: 0.0;
+
+	/* allow checking of input if visible */
+	-moz-user-input: enabled  !important;
+}
+
+.ibutton-handle {
+  display: block;
+  height: 27px;
+  cursor: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  background: transparent url(../img/ibutton-slider-default.png) no-repeat scroll 0 -54px;
+  z-index: 3;
+  padding-left: 3px;
+	/* set default width based on ON/OFF labels */
+	width: 33px;
+}
+
+.ibutton-handle-right {
+  height: 100%;
+  width: 100%;
+  padding-right: 3px;
+  background: transparent url(../img/ibutton-slider-default.png) no-repeat scroll 100% -54px;
+  z-index: 3; 
+}
+
+.ibutton-handle-middle {
+  height: 100%;
+  width: 100%;
+  background: transparent url(../img/ibutton-slider-default.png) no-repeat scroll 50% -54px;
+  z-index: 3; 
+}
+
+div.ibutton-label-on, div.ibutton-label-off {
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 17px;
+  font-weight: bold;
+  font-family: Helvetica Neue, Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: inherit;
+  display: block;
+  height: 22px;
+  position: absolute;
+  width: auto;
+  top: 0;
+  padding-top: 5px;
+  overflow: hidden; 
+  background: transparent url(../img/ibutton-slider-default.png) no-repeat scroll 0 0;
+}
+
+div.ibutton-label-on {
+  color: #fff;
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.4);
+  left: 0;
+  padding-top: 5px;
+  z-index: 1; 
+}
+
+div.ibutton-label-on span {
+  padding-left: 5px;
+}
+
+div.ibutton-label-off {
+  color: #7c7c7c;
+  background-position: 100% 0;
+  text-shadow: 0 -1px 2px rgba(153, 153, 153, 0.4);
+  text-align: right;
+  right: 0;
+	/* the off label needs to near the left edge (ideally just 5px away) 
+	 * it just needs to be close enough that it won't show under the handle if dragged to the left  
+	 */
+	width: 95%;
+}
+
+div.ibutton-label-off span {
+  padding-right: 5px; 
+}
+
+/* create an outline when button gets focus via keyboard */
+.ibutton-container label {
+	cursor: inherit;
+	padding: 1px 3px;
+	font-size: 1em !important;
+        display: inline !important;
+        text-shadow: 1px 1px #fff;
+        color: #333;
+}
+
+div.ibutton-label-on label{
+    text-shadow: 1px 1px #fff;
+        color: #444;
+}
+
+.ibutton-focus label {
+	/* we must use border, since outline doesn't work in IE */
+	border: 1px dotted #666 !important;
+	padding: 0 2px;
+        display: inline !important;
+}
+
+.ibutton-focus div.ibutton-label-on span label {
+	/* use white for more contrast */
+	border-color: #fff !important;
+        display: inline !important;
+}
+
+/* add padding to right/left so that text gets clipped before absolute edge */
+.ibutton-padding-left, .ibutton-padding-right {
+	position: absolute; 
+	top: 4px;
+	z-index: 2; 
+	background: transparent url(../img/ibutton-slider-default.png) no-repeat scroll 0 -4px; 
+	width: 3px;
+	height: 20px;
+}
+	
+.ibutton-padding-left {
+	left: 0; 
+}
+
+.ibutton-padding-right {
+	right: 0; 
+	background-position: 100% -4px;
+}
+
+/* change the styles of the handle when being dragged */
+.ibutton-active-handle .ibutton-handle {
+	background-position: 0 -108px;
+}
+
+.ibutton-active-handle .ibutton-handle-right {
+	background-position: 100% -108px;
+}
+
+.ibutton-active-handle .ibutton-handle-middle {
+	background-position: 50% -108px;
+}
+
+/* styles to use when the button is disabled */
+.ibutton-disabled {
+	cursor: not-allowed !important; /* cursor options: default or not-allowed */
+}
+
+.ibutton-disabled .ibutton-handle {
+	background-position: 0 -81px;
+}
+
+.ibutton-disabled .ibutton-handle-right {
+	background-position: 100% -81px;
+}
+
+.ibutton-disabled .ibutton-handle-middle {
+	background-position: 50% -81px;
+}
+
+.ibutton-disabled div.ibutton-label-on {
+	background-position: 0 -27px;
+}
+
+.ibutton-disabled div.ibutton-label-off {
+	background-position: 100% -27px;
+}
+
+.ibutton-disabled .ibutton-padding-left {
+	background-position: 0 -27px;
+}
+
+.ibutton-disabled .ibutton-padding-right {
+	background-position: 100% -27px;
+}
+
+.ibutton-disabled div.ibutton-label-on {
+	color: #fff;
+}
+
+.ibutton-disabled div.ibutton-label-off {
+	color: #cbcbcb;
+}

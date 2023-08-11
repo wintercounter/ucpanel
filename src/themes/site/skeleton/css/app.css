@@ -1,0 +1,123 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Countdown
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+body{
+    padding-top: 50px;
+}
+
+.row{
+    width: 550px;
+    min-width: auto;
+    margin-bottom: 50px;
+}
+
+.tc{
+    text-align: center;
+}
+
+/* -----------------------------------------
+   Countdown
+----------------------------------------- */
+
+#module_countdown{
+    display: inline-block;
+}
+
+#module_countdown .box{
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+}
+
+#module_countdown .counter{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* -----------------------------------------
+   Social links
+----------------------------------------- */
+
+#social_links .facebook{
+    background-color: #5da423;
+    border: 1px solid #396516;
+}
+
+#social_links .facebook:hover{
+    background-color: #457a1a;
+}
+
+#social_links .youtube{
+    background-color: #c60f13;
+    border: 1px solid #7f0a0c;
+}
+
+#social_links .youtube:hover{
+    background-color: #970b0e;
+}
+
+#social_links .custom{
+    background-color: #e9e9e9;
+    color: #1d1d1d;
+    border: 1px solid #c3c3c3;
+}
+
+#social_links .custom:hover{
+    background-color: #d0d0d0;
+}
+
+/* -----------------------------------------
+   Progressbar
+----------------------------------------- */
+
+#progressbars > div{
+    float: left;
+    position: relative;
+    height: 30px;
+    z-index: 0;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#progressbars > div > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 8;
+    transition:all 2s;-moz-transition:all 2s;-webkit-transition:all 2s;-o-transition:all 2s;
+    width: 0%;
+}
+
+#progressbars span.progress_label{
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    line-height: 30px;
+    text-indent: 10px;
+}
+
+#progressbars span.percentage{
+    display: block;
+    position: absolute;
+    z-index: 10;
+    line-height: 30px;
+    font-weight: bold;
+    right: 10px;
+    top: 0;
+}
+
+

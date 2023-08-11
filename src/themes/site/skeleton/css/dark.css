@@ -1,0 +1,24 @@
+/* -----------------------------------------
+   Progressbar
+----------------------------------------- */
+
+body{
+  background: #111;
+  color: #fff;
+}
+
+#progressbars > div{
+    border: 1px solid #ddd;
+}
+
+#progressbars > div > div{
+    background: #fd4e4e;
+}
+
+#module_countdown .box{
+    border: 10px solid #fff;
+}
+
+h2{
+  color: #ddd;
+}
